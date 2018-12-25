@@ -33,7 +33,7 @@ test:
   php_code_sniffer:
     path: ./src
     standard: PSR2
-    allowed_errors: -1 # Even a single error will cause the build to fail. -1 = unlimited
+    allowed_errors: -1
     allowed_warnings: -1
 
   php_cpd:
@@ -62,7 +62,7 @@ test:
     zero_config: true
 
   technical_debt:
-    directory: "./src"
+    directory: ./src
     ignore:
       - ./vendor
       - ./tests
@@ -71,8 +71,8 @@ test:
 failure:
   email:
     committer: true
-    default_mailto_address: "panosru@me.com"
+    default_mailto_address: panosru@me.com
 
 complete:
   email:
-    default_mailto_address: "panosru@me.com"
+    default_mailto_address: panosru@me.com
