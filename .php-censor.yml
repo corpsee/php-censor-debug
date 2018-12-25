@@ -11,6 +11,8 @@ test:
 
   codeception:
     directory: ./src
+    config:
+      - codeception.yml
 
   security_checker:
     allowed_warnings: -1
@@ -51,16 +53,16 @@ test:
       - ./tests
     allowed_warnings: -1
     rules:
-      - cleancode
-      - controversial
-      - codesize
-      - desig"
-      - naming
-      - unusedcode
+      - "cleancode"
+      - "controversial"
+      - "codesize"
+      - "design"
+      - "naming"
+      - "unusedcode"
     zero_config: true
 
   technical_debt:
-    directory: ./src
+    directory: "./src"
     ignore:
       - ./vendor
       - ./tests
@@ -69,8 +71,8 @@ test:
 failure:
   email:
     committer: true
-    default_mailto_address: panosru@me.com
+    default_mailto_address: "panosru@me.com"
 
 complete:
   email:
-    default_mailto_address: panosru@me.com
+    default_mailto_address: "panosru@me.com"
